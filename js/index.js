@@ -147,7 +147,7 @@ function leave() {
     $('.dialog5').hide();
     $('.dialog6').show();
     $('.gucangfox').hide();
-    audio1.src = "audio/S3the fox went around the puddle.wav";
+    audio1.src = "audio/S5the fox went past the bags of corn.wav";
     audio1.play();
     $('.page03fox').fadeIn('slow',function () {
         $('.page03fox').animate({left:'-2rem'},function () {
