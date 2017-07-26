@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Silly Fox 愚蠢的狐狸</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script>
+        (function () {
+            window.html = document.documentElement;
+            window.hWidth = html.getBoundingClientRect().width;
+            html.style.fontSize = hWidth / 16 + "px";
+        })()
+    </script>
+</head>
+<body>
+<!-- loading -->
+<div id="loading">
+    <p id="lodingnum">0%</p>
+</div>
+
+<audio preload="load" id="audio1" src="" style="display:none;"></audio>
+
+<div class="bigbox" style="overflow: hidden;">
+    <!--首页-->
+    <div class="big">
+        <div class="index">
+            <a href="javascript:;">
+                <img src="images/start.png" class="start"/>
+            </a>
+        </div>
+    </div>
+
+    <!--规则页面-->
+    <div class="big">
+        <div class="rule">
+            <img src="images/logo.png" class="logo">
+            <a href="javascript:;">
+                <img src="images/go.png" class="go"/>
+                <img src="images/hand.png" class="hand"/>
+            </a>
+        </div>
+    </div>
+
+    <!--content页面页面-->
+    <div class="big">
+        <div class="page page01">
+            <ul>
+                <li>
+                    <img src="images/chicken.png" alt="" class="chicken">
+                    <img src="images/fox.png" alt="" class="fox">
+                    <img src="images/BtnLeft.png" alt="" class="BtnLeft" onclick="toHome()">
+                    <img src="images/BtnRight.png" alt="" class="BtnRight" onclick="toP2()">
+                    <img src="images/run.png" alt="" onclick="run()">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="big">
+        <div class="page page02">
+            <ul>
+                <li>
+                    <img src="images/fox.png" alt="" class="page02fox">
+                    <img src="images/dropfox.png" alt="" class="page02dropfox">
+                    <img src="images/dialog1.png" alt="" class="dialog1">
+                    <img src="images/dialog2.png" alt="" class="dialog2">
+                    <img src="images/dialog3.png" alt="" class="dialog3">
+                    <img src="images/BtnLeft.png" alt="" onclick="toP1()">
+                    <img src="images/BtnRight.png" alt="" onclick="toP3()">
+                    <img src="images/BtnWenhao.png" alt="" class="wenhao" onclick="wenhao()">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="big">
+        <div class="page page03">
+            <ul>
+                <li>
+                    <img src="images/fox.png" alt="" class="page03fox">
+                    <img src="images/gucangfox.png" alt="" class="gucangfox">
+                    <img src="images/dialog1.png" alt="" class="dialog4">
+                    <img src="images/dialog5.png" alt="" class="dialog5">
+                    <img src="images/dialog6.png" alt="" class="dialog6">
+                    <img src="images/BtnLeft.png" alt="" onclick="toP2()">
+                    <img src="images/BtnRight.png" alt="" onclick="toP4()">
+                    <img src="images/BtnWenhao.png" alt="" class="wenhao" onclick="p3wenhao()">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="big">
+        <div class="page page04">
+            <ul>
+                <li>
+                    <img src="images/page4fox.png" alt="" class="page04fox">
+                    <img src="images/fengfang.png" alt="" class="fengfang">
+                    <img src="images/fengfangfox.png" alt="" class="fengfangfox">
+                    <img src="images/dialog1.png" alt="" class="dialog1">
+                    <img src="images/dialog7.png" alt="" class="dialog7">
+                    <img src="images/dialog8.png" alt="" class="dialog8">
+                    <img src="images/BtnLeft.png" alt="" onclick="backP3()">
+                    <img src="images/BtnRight.png" alt="" onclick="toEnd()">
+                    <img src="images/BtnWenhao.png" alt="" onclick="p4wenhao()">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="big">
+        <div class="page end">
+
+        </div>
+    </div>
+</div>
+
+<script src="public/js/jquery-1.6.1.js"></script>
+<script src="public/js/jquery.imgpreload.min.js"></script>
+<script src="public/js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
