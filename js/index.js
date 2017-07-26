@@ -44,9 +44,8 @@ var the_images = [
     "images/foxLeft03.png",
     "images/foxLeft04.png",
     "images/foxLeft05.png",
-    "tui.png",
-    "jiqiantui.png",
-    "jihoutui.png"
+    "chicken1.png",
+    "chicken2.png",
 ];
 jQuery.imgpreload(the_images, {
     each: function () {
@@ -151,6 +150,7 @@ function goout() {
 
 }
 function backP1() {
+    $('.chicken').removeClass('run_chicken');
     $('.fox').removeClass('run_fox')
     $(".chicken").css({"top":"50%","right":"50%"})
     $(".fox").css({"left":"-1.2rem","bottom":"4rem"})
