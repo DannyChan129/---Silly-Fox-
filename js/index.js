@@ -44,7 +44,9 @@ var the_images = [
     "images/foxLeft03.png",
     "images/foxLeft04.png",
     "images/foxLeft05.png",
-    "tui.png"
+    "tui.png",
+    "jiqiantui.png",
+    "jihoutui.png"
 ];
 jQuery.imgpreload(the_images, {
     each: function () {
@@ -69,6 +71,7 @@ function run() {
     audio1.src = "audio/run.mp3";
     audio1.play()
     $('.run').hide();
+    $('.chicken').addClass('run_chicken');
     $('.chicken').animate({right:'-60px',top:'30px'},2000,function () {
         $('.fox').animate({left:'500px',bottom:'800px'},3000,function () {
             $('.BtnLeft').show();
@@ -98,6 +101,7 @@ function toHome() {
     setTimeout(function () {
         $(".chicken").css({"top":"50%","right":"50%"})
         $(".fox").css({"left":"-1.2rem","bottom":"4rem"})
+        $('.chicken').removeClass('run_chicken');
     },1000)
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop / (aWidth / 16) + "rem";
 }

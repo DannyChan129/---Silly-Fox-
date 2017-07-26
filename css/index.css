@@ -105,14 +105,40 @@ img{
     background-position: 0px 0px;
     background-size: 100% 100%;
 }
-.page01 img:nth-child(2){
+.chicken{
     width: 4.3rem;
     height: 4.8rem;
     position: absolute;
+    background-image: url(../images/chicken1.png);
+    background-size: 4.3rem 4.8rem;
     top:50%;
     right:50%;
     margin: -2.25rem -2.3rem;
 }
+.run_chicken{
+    -webkit-animation: changeImg4 1s linear infinite;
+}
+@-webkit-keyframes changeImg4 {
+    0% {
+        background-image: url(../images/chicken1.png);
+    }
+    30% {
+        background-image: url(../images/chicken2.png);
+    }
+    35% {
+        background-image: url(../images/chicken1.png);
+    }
+    65% {
+        background-image: url(../images/chicken2.png);
+    }
+    70% {
+        background-image: url(../images/chicken1.png);
+    }
+    100% {
+        background-image: url(../images/chicken2.png);
+    }
+}
+
 
 /*.page01 img:nth-child(2){*/
     /*width: 10.2rem;*/
@@ -418,7 +444,7 @@ img{
     height: 8.5rem;
     position: absolute;
     left:3.3rem;
-    bottom:10.6rem;
+    top:33%;
     z-index: 5;
 
 }
