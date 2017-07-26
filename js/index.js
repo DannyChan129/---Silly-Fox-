@@ -38,7 +38,13 @@ var the_images = [
     "images/foxRight03.png",
     "images/foxRight04.png",
     "images/foxRight05.png",
-    "images/koushui.png"
+    "images/koushui.png",
+    "images/foxLeft01.png",
+    "images/foxLeft02.png",
+    "images/foxLeft03.png",
+    "images/foxLeft04.png",
+    "images/foxLeft05.png",
+    "tui.png"
 ];
 jQuery.imgpreload(the_images, {
     each: function () {
@@ -63,8 +69,8 @@ function run() {
     audio1.src = "audio/run.mp3";
     audio1.play()
     $('.run').hide();
-    $('.chicken').animate({right:'-3rem',top:'2rem'},2000,function () {
-        $('.fox').animate({left:'+17rem',bottom:'20rem'},2000,function () {
+    $('.chicken').animate({right:'-60px',top:'30px'},2000,function () {
+        $('.fox').animate({left:'500px',bottom:'800px'},3000,function () {
             $('.BtnLeft').show();
             $('.BtnRight').show();
 
@@ -227,6 +233,8 @@ function toP4() {
     setTimeout(function () {
         audio1.src = "audio/a7whathappenedtothefox.mp3";
         audio1.play()
+        $('.qiantui').show();
+        $('.houtui').show();
         $('.page04fox').show();
         $('.fengfangfox').hide();
         $('.fengfang').show();
@@ -252,6 +260,8 @@ function p4wenhao() {
 }
 
 function fengfang() {
+    $('.qiantui').hide();
+    $('.houtui').hide();
     $('.page04fox').hide();
     $('.fengfang').hide();
     $('.dialog1').hide();
@@ -265,6 +275,8 @@ function fengfang() {
     },3000)
 }
 function leaveout() {
+    $('.qiantui').show();
+    $('.houtui').show();
     $('.page04fox').addClass('run_Left_fox');
     $('.dialog1').hide();
     $('.dialog7').hide();
@@ -288,7 +300,9 @@ function backP3() {
         audio1.src = "audio/a7whathappenedtothefox.mp3";
         audio1.play()
         $('.page03fox').show();
-        $('.dialog1').css({"display":"block","z-Index":"2"});
+        $('.dialog1').css({"display":"block"});
+        $('.dialog5').hide();
+        $('.dialog6').hide();
         $('.page02fox').removeClass('run_fox');
         $('.page03fox').removeClass('run_fox');
         $('.page03fox').css({ "left":"-3.2rem","bottom":"8rem"})

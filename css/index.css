@@ -150,7 +150,7 @@ img{
     height: 6.2rem;
     position: absolute;
     left:-1.2rem;
-    bottom:4rem;
+    bottom:3.5rem;
     background-image: url(../images/foxRight01.png);
     background-size: 10.2rem 6.2rem;
 }
@@ -389,21 +389,23 @@ img{
     background-position: 0px 0px;
     background-size: 100% 100%;
 }
-.page04 img:nth-child(1){
-    width: 7.5rem;
-    height: 4.5rem;
+.page04 img:nth-child(4){
+    width: 10.9rem;
+    height: 8.8rem;
     position: absolute;
-    right:-4.7rem;
-    top:12rem;
+    right:3.3rem;
+    top:9.1rem;
+
 }
 .page04 img:nth-child(2){
-    width: 10.2rem;
-    height: 8rem;
+    width: 8.1rem;
+    height:5rem;
     position: absolute;
-    top:10rem;
-    left:3rem;
+    top:13.2rem;
+    left:4.7rem;
+    z-index: 4;
 }
-.page04 img:nth-child(3){
+.page04 img:nth-child(1){
     width: 13.2rem;
     height: 9rem;
     position: absolute;
@@ -411,44 +413,62 @@ img{
     left:.7rem;
     display: none;
 }
-.page04 img:nth-child(4){
-    width: 14rem;
-    height: 2.7rem;
+.page04 img:nth-child(3){
+    width:9.5rem;
+    height: 8.5rem;
     position: absolute;
-    top:1rem;
-    left:.7rem;
+    left:3.3rem;
+    bottom:10.6rem;
+    z-index: 5;
+
 }
 .page04 img:nth-child(5){
-    width: 14rem;
-    height: 2.7rem;
+    width: 5.3rem;
+    height: 3.2rem;
     position: absolute;
-    top:1rem;
-    left:.7rem;
-    display: none;
+    top:14.1rem;
+    left:3.7rem;
+    z-index: 2;
 }
+
 .page04 img:nth-child(6){
     width: 14rem;
     height: 2.7rem;
     position: absolute;
     top:1rem;
     left:.7rem;
-    display: none;
 }
 .page04 img:nth-child(7){
+    width: 14rem;
+    height: 2.7rem;
+    position: absolute;
+    top:1rem;
+    left:.7rem;
+    display: none;
+}
+.page04 img:nth-child(8){
+    width: 14rem;
+    height: 2.7rem;
+    position: absolute;
+    top:1rem;
+    left:.7rem;
+    display: none;
+}
+.page04 img:nth-child(9){
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
     bottom:1.5rem;
     left:.5rem;
 }
-.page04 img:nth-child(8){
+.page04 img:nth-child(10){
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
     bottom:1.5rem;
     right:.5rem;
 }
-.page04 img:nth-child(9){
+.page04 img:nth-child(11){
     width: 5.5rem;
     height: 2.5rem;
     position: absolute;
@@ -464,6 +484,7 @@ img{
     top:12rem;
     background-image: url(../images/foxLeft01.png);
     background-size: 8rem 5rem;
+    z-index: 3;
 }
 .run_Left_fox {
     -webkit-animation: changeImg2 1s linear infinite;
@@ -472,19 +493,37 @@ img{
     0% {
         background-image: url(../images/foxLeft01.png);
     }
-    30% {
+    6% {
+        background-image: url(../images/foxLeft01.png);
+    }
+    12% {
         background-image: url(../images/foxLeft02.png);
     }
-    35% {
+    18% {
+        background-image: url(../images/foxLeft02.png);
+    }
+    24% {
         background-image: url(../images/foxLeft03.png);
     }
-    65% {
+    30% {
+        background-image: url(../images/foxLeft03.png);
+    }
+    36% {
         background-image: url(../images/foxLeft04.png);
     }
-    70% {
+    42% {
+        background-image: url(../images/foxLeft04.png);
+    }
+    48% {
+        background-image: url(../images/foxLeft05.png);
+    }
+    60% {
+        background-image: url(../images/foxLeft04.png);
+    }
+    72% {
         background-image: url(../images/foxLeft03.png);
     }
-    90% {
+    84% {
         background-image: url(../images/foxLeft02.png);
     }
     100% {
