@@ -8,77 +8,12 @@ $('.start').click(function () {
 $('.go').click(function () {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop * 2 / (aWidth / 16) + "rem";
 
-    // function page() {
-    //     $('.tab_content').show()
-    //     var tab_content = document.getElementsByClassName('tab_content')[0];
-    //     var str = "<ul id='ul1'><li><img src=''/ ></li><li><img src=''/></li>\
-    //                                       <li><img src=''/></li><li><img src=''/></li></ul><ul id='ul2' >\
-    //                                       <li><img src=''/></li><li><img src=''/></li><li><img src=''/></li>\
-    //                                       <li><img src=''/></li></ul>";
-    //     tab_content.innerHTML = str
-    //     var oUl1 = document.getElementById('ul1');
-    //     var aLi1 = oUl1.getElementsByTagName('li');
-    //     var aImg1 = oUl1.getElementsByTagName('img');
-    //
-    //     var oUl2 = document.getElementById('ul2');
-    //     var aLi2 = oUl2.getElementsByTagName('li');
-    //     var aImg2 = oUl2.getElementsByTagName('img');
-    //
-    //     for (var i = 0; i < aLi2.length; i++) {
-    //         aImg1[i].src = aImg_src[number][i]
-    //         aImg2[i].src = aImg_src[number][i]
-    //     }
-    //
-    //     setTimeout(function () {
-    //         for (var i = 0; i < aLi1.length; i++) {
-    //             aLi1[i].style.position = 'absolute';
-    //             aLi1[i].style.margin = 0;
-    //             startMove(aLi1[i], {left: pos_arr1[number][i][0], top: pos_arr1[number][i][1]});
-    //             aLi1[i].setAttribute("data-value", i)
-    //             drag(aLi1[i], aLi1, oUl1, function () {
-    //                 $('.mack1').show()
-    //                 setTimeout(function () {
-    //                     $('.tab_content').hide()
-    //                     obj_arr[number].addClass('yes')
-    //                     obj_arr[number].show()
-    //                     $('.laba,.mack,.next,.guang').show()
-    //                     $('.next').addClass("next1")
-    //                     $(".laba,.puppy").click(function () {
-    //                         A1.src = audio_arr[number]
-    //                         A1.play()
-    //                     })
-    //                     $(".puppy").css("display", "block")
-    //                     aNext.addEventListener("click", function () {
-    //                         A1.src = audio_arr[number]
-    //                         A1.play()
-    //                         obj_arr[number].css("display", "none")
-    //                         $('.guang,.mack,.mack1,.next,.laba,.puppy').hide()
-    //                         if (on_off) {
-    //                             on_off = false
-    //                             number++;
-    //                         }
-    //                         if (number <= obj_arr.length - 1) {
-    //                             page()
-    //                             setTimeout(function () {
-    //                                 on_off = true
-    //                             }, 10)
-    //                         } else {
-    //                             $('.line').hide()
-    //                             $('.end').show()
-    //                             $('.onceMore').click(function () {
-    //                                 window.location.href = window.location.href + "?id=" + 10000 * Math.random();
-    //                             })
-    //                         }
-    //                         A1.src = audio_arr[number]
-    //                         A1.play()
-    //                         $('.puppy').attr("src", aImg1_src[number])
-    //                     }, false)
-    //                 }, 1000)
-    //
-    //             });
-    //         }
-    //     }, 3000)
-    // }
+
+})
+
+//再来一次
+$("#onceMore").click(function(){
+    window.location.href=window.location.href+"?id="+10000*Math.random();
 })
 
 //预加载
@@ -112,9 +47,8 @@ jQuery.imgpreload(the_images, {
     }
 })
 
-
+var audio1 = document.getElementById('audio1');
 function run() {
-    var audio1 = document.getElementById('audio1');
     audio1.src = "audio/run.wav";
     audio1.play()
     $('.chicken').animate({right:'+3rem',top:'+5.5rem'},"slow",function () {
@@ -125,12 +59,15 @@ function run() {
     });
 
 }
-
+//page01
 function toP2() {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *3/ (aWidth / 16) + "rem";
     setTimeout(function () {
         audio1.src = "audio/S1whats gonna happen.wav";
         audio1.play()
+        // $('.page02 .p1dialog1').show();
+        // $('.page02dropfox').hide();
+        // $('.page02fox').css({"left":"-3.2rem","bottom":"12rem"});
     },1000)
 }
 
@@ -174,7 +111,7 @@ function goout() {
         })
     })
 }
-function toP1() {
+function backP1() {
     $(".chicken").css({"top":"50%","right":"50%"})
     $(".fox").css({"left":"-1.2rem","bottom":"4rem"})
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *2/ (aWidth / 16) + "rem";
@@ -193,7 +130,7 @@ function p3wenhao() {
     if(random==0){
         gucang()
     }else if(random==1){
-        $('.page03fox').css({"left":"-3.2rem","bottom":"12rem"});
+        $('.page03fox').css({"left":"-3.2rem","bottom":"8rem"});
         leave();
     }
 }
@@ -201,24 +138,26 @@ function gucang() {
     $('.page03fox').hide();
     $('.dialog4').hide();
     $('.gucangfox').show();
+    $('.dialog6').hide();
     $('.dialog5').css({"display":"block"});
     audio1.src = "audio/S4the fox was stuck.wav";
     audio1.play();
 }
 function leave() {
+    $('.dialog5').hide();
     $('.dialog6').show();
     $('.gucangfox').hide();
     audio1.src = "audio/S3the fox went around the puddle.wav";
     audio1.play();
     $('.page03fox').fadeIn('slow',function () {
-        $('.page03fox').animate({left:'+3rem'},function () {
-            $('.page03fox').animate({bottom:'-.05rem'},function () {
-                $('.page03fox').animate({left:'+8rem'});
+        $('.page03fox').animate({left:'-2rem'},function () {
+            $('.page03fox').animate({bottom:'5rem'},function () {
+                $('.page03fox').animate({left:'20rem'},2000);
             })
         })
     })
 }
-function toP2() {
+function toP22() {
     setTimeout(function () {
         $(".page03fox").css({"left":"-3.2rem","bottom":"8rem"});
         $(".gucangfox").hide();
@@ -247,20 +186,22 @@ function p4wenhao() {
 function fengfang() {
     $('.page04fox').hide();
     $('.fengfang').hide();
-    $('.page04 .dialog4').hide();
+    $('.page04 .dialog1').hide();
+    $('.dialog8').hide();
     $('.fengfangfox').show();
     $('.dialog7').css({"display":"block"});
     audio1.src = "audio/S6the fox bumped into the beehive.wav";
     audio1.play();
 }
 function leaveout() {
+    $('.dialog7').hide();
     $('.dialog8').show();
     $('.fengfang').show();
     $('.fengfangfox').hide();
     audio1.src = "audio/S7the fox was under the beehive.wav";
     audio1.play();
     $('.page04fox').fadeIn('slow',function () {
-        $('.page04fox').animate({"right":"6.5rem","top":"14rem"},'1200')
+        $('.page04fox').animate({"right":"16rem","top":"15rem"},'2000')
     })
 }
 function backP3() {
