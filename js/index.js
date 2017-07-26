@@ -80,7 +80,9 @@ function toP2() {
         audio1.play()
         $('.page02fox').show();
         $('.page02dropfox').hide();
-        $('.p1dialog1').css({"display":"block","z-Index":"2"});
+        $('.p1dialog1').css({"display":"block",});
+        $('.dialog2').hide();
+        $('.dialog3').hide();
         $('.page02fox').removeClass('run_fox');
         $('.page02fox').css({ "left":"-3.2rem","bottom":"12rem"})
     },1000)
@@ -152,7 +154,9 @@ function toP3() {
         audio1.play()
         $('.page03fox').show();
         $('.gucangfox').hide();
-        $('.dialog4').css({"display":"block","z-Index":"2"});
+        $('.dialog1').css({"display":"block"});
+        $('.dialog3').hide();
+        $('.dialog5').hide();
         $('.page02fox').removeClass('run_fox');
         $('.page02fox').css({ "left":"-3.2rem","bottom":"12rem"})
     },1000)
@@ -250,7 +254,7 @@ function p4wenhao() {
 function fengfang() {
     $('.page04fox').hide();
     $('.fengfang').hide();
-    $('.page04 .dialog1').hide();
+    $('.dialog1').hide();
     $('.dialog8').hide();
     $('.fengfangfox').show();
     $('.dialog7').css({"display":"block"});
@@ -262,6 +266,7 @@ function fengfang() {
 }
 function leaveout() {
     $('.page04fox').addClass('run_Left_fox');
+    $('.dialog1').hide();
     $('.dialog7').hide();
     $('.dialog8').show();
     $('.fengfang').show();
