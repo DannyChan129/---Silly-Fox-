@@ -34,7 +34,6 @@
     <!--规则页面-->
     <div class="big">
         <div class="rule">
-            <img src="images/logo.png" class="logo">
             <a href="javascript:;">
                 <img src="images/go.png" class="go"/>
                 <img src="images/hand.png" class="hand"/>
@@ -48,11 +47,11 @@
         <div class="page page01">
             <ul>
                 <li>
+                    <span class="fox"><i></i></span>
                     <img src="images/chicken.png" alt="" class="chicken">
-                    <img src="images/fox.png" alt="" class="fox">
                     <img src="images/BtnLeft.png" alt="" class="BtnLeft" onclick="toHome()">
                     <img src="images/BtnRight.png" alt="" class="BtnRight" onclick="toP2()">
-                    <img src="images/run.png" alt="" onclick="run()">
+                    <img src="images/run.png" alt="" onclick="run()" class="run">
                 </li>
             </ul>
         </div>
@@ -63,7 +62,7 @@
         <div class="page page02">
             <ul>
                 <li>
-                    <img src="images/fox.png" alt="" class="page02fox">
+                    <span class="page02fox"></span>
                     <img src="images/dropfox.png" alt="" class="page02dropfox">
                     <img src="images/dialog1.png" alt="" class="p1dialog1">
                     <img src="images/dialog2.png" alt="" class="dialog2">
@@ -81,12 +80,12 @@
         <div class="page page03">
             <ul>
                 <li>
-                    <img src="images/fox.png" alt="" class="page03fox">
+                    <span class="page03fox"></span>
                     <img src="images/gucangfox.png" alt="" class="gucangfox">
-                    <img src="images/dialog1.png" alt="" class="dialog4">
+                    <img src="images/dialog1.png" alt="" class="dialog1">
                     <img src="images/dialog5.png" alt="" class="dialog5">
                     <img src="images/dialog6.png" alt="" class="dialog6">
-                    <img src="images/BtnLeft.png" alt="" onclick="toP2()">
+                    <img src="images/BtnLeft.png" alt="" onclick="backP2()">
                     <img src="images/BtnRight.png" alt="" onclick="toP4()">
                     <img src="images/BtnWenhao.png" alt="" class="wenhao" onclick="p3wenhao()">
                 </li>
@@ -99,7 +98,7 @@
         <div class="page page04">
             <ul>
                 <li>
-                    <img src="images/page4fox.png" alt="" class="page04fox">
+                    <span class="page04fox"></span>
                     <img src="images/fengfang.png" alt="" class="fengfang">
                     <img src="images/fengfangfox.png" alt="" class="fengfangfox">
                     <img src="images/dialog1.png" alt="" class="dialog1">
@@ -107,7 +106,7 @@
                     <img src="images/dialog8.png" alt="" class="dialog8">
                     <img src="images/BtnLeft.png" alt="" onclick="backP3()">
                     <img src="images/BtnRight.png" alt="" onclick="toEnd()">
-                    <img src="images/BtnWenhao.png" alt="" onclick="p4wenhao()">
+                    <img src="images/BtnWenhao.png" alt="" onclick="p4wenhao()" class="wenhao">
                 </li>
             </ul>
         </div>
@@ -115,7 +114,7 @@
     <div class="big">
         <div class="end">
             <span></span>
-            <span></span>
+            <span class="smile"></span>
             <h4 class="onceMore" id="onceMore"></h4>
         </div>
     </div>
@@ -124,8 +123,6 @@
 
 <script src="public/js/jquery-1.6.1.js"></script>
 <script src="public/js/jquery.imgpreload.min.js"></script>
-<script src="public/js/common.js"></script>
-<script src="js/currency.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

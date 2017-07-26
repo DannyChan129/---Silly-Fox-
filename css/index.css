@@ -105,7 +105,7 @@ img{
     background-position: 0px 0px;
     background-size: 100% 100%;
 }
-.page01 img:nth-child(1){
+.page01 img:nth-child(2){
     width: 4.3rem;
     height: 4.8rem;
     position: absolute;
@@ -114,13 +114,13 @@ img{
     margin: -2.25rem -2.3rem;
 }
 
-.page01 img:nth-child(2){
-    width: 10.2rem;
-    height: 6.2rem;
-    position: absolute;
-    left:-1.2rem;
-    bottom:4rem;
-}
+/*.page01 img:nth-child(2){*/
+    /*width: 10.2rem;*/
+    /*height: 6.2rem;*/
+    /*position: absolute;*/
+    /*left:-1.2rem;*/
+    /*bottom:4rem;*/
+/*}*/
 .page01 img:nth-child(3){
     width: 2.5rem;
     height: 2.5rem;
@@ -145,6 +145,46 @@ img{
     left:50%;
     margin-left:-2.75rem;
 }
+.fox{
+    width: 10.2rem;
+    height: 6.2rem;
+    position: absolute;
+    left:-1.2rem;
+    bottom:4rem;
+    background-image: url(../images/foxRight01.png);
+    background-size: 10.2rem 6.2rem;
+}
+.run_fox {
+    -webkit-animation: changeImg1 1s linear infinite;
+}
+@-webkit-keyframes changeImg1 {
+    0% {
+        background-image: url(../images/foxRight01.png);
+    }
+    30% {
+        background-image: url(../images/foxRight01.png);
+    }
+    35% {
+        background-image: url(../images/foxRight02.png);
+    }
+    65% {
+        background-image: url(../images/foxRight02.png);
+    }
+    70% {
+        background-image: url(../images/foxRight01.png);
+    }
+    100% {
+        background-image: url(../images/foxRight01.png);
+    }
+}
+.fox i{
+    width: .5rem;
+    height: .7rem;
+    position: absolute;
+    left:8.1rem;
+    bottom:2.3rem;
+    background-image: url(../images/koushui.png);
+}
 /*page2*/
 .page02{
     width: 100%;
@@ -155,13 +195,7 @@ img{
     background-position: 0px 0px;
     background-size: 100% 100%;
 }
-.page02 img:nth-child(1){
-    width: 10.2rem;
-    height: 6.2rem;
-    position: absolute;
-    left:-3.2rem;
-    bottom:12rem;
-}
+
 .page02 img:nth-child(2){
     width: 7.7rem;
     height: 5.8rem;
@@ -217,6 +251,38 @@ img{
     left:50%;
     margin-left:-2.75rem;
 }
+.page02fox{
+    width: 10.2rem;
+    height: 6.2rem;
+    position: absolute;
+    left:-3.2rem;
+    bottom:12rem;
+    background-image: url(../images/foxRight01.png);
+    background-size: 10.2rem 6.2rem;
+}
+.run_fox {
+    -webkit-animation: changeImg1 1s linear infinite;
+}
+@-webkit-keyframes changeImg1 {
+    0% {
+        background-image: url(../images/foxRight01.png);
+    }
+    30% {
+        background-image: url(../images/foxRight01.png);
+    }
+    35% {
+        background-image: url(../images/foxRight02.png);
+    }
+    65% {
+        background-image: url(../images/foxRight02.png);
+    }
+    70% {
+        background-image: url(../images/foxRight01.png);
+    }
+    100% {
+        background-image: url(../images/foxRight01.png);
+    }
+}
 /*page3*/
 .page03{
     width: 100%;
@@ -227,13 +293,7 @@ img{
     background-position: 0px 0px;
     background-size: 100% 100%;
 }
-.page03 img:nth-child(1){
-    width: 10.2rem;
-    height: 6.2rem;
-    position: absolute;
-    left:-3.2rem;
-    bottom:8rem;
-}
+
 .page03 img:nth-child(2){
     width: 9.2rem;
     height: 6.8rem;
@@ -287,7 +347,38 @@ img{
     left:50%;
     margin-left:-2.75rem;
 }
-
+.page03fox{
+    width: 10.2rem;
+    height: 6.2rem;
+    position: absolute;
+    left:-3.2rem;
+    bottom:8rem;
+    background-image: url(../images/foxRight01.png);
+    background-size: 10.2rem 6.2rem;
+}
+.run_fox {
+    -webkit-animation: changeImg1 1s linear infinite;
+}
+@-webkit-keyframes changeImg1 {
+    0% {
+        background-image: url(../images/foxRight01.png);
+    }
+    30% {
+        background-image: url(../images/foxRight01.png);
+    }
+    35% {
+        background-image: url(../images/foxRight02.png);
+    }
+    65% {
+        background-image: url(../images/foxRight02.png);
+    }
+    70% {
+        background-image: url(../images/foxRight01.png);
+    }
+    100% {
+        background-image: url(../images/foxRight01.png);
+    }
+}
  /*page4*/
 .page04{
     width: 100%;
@@ -365,7 +456,41 @@ img{
     left:50%;
     margin-left:-2.75rem;
 }
-
+.page04fox{
+    width: 8rem;
+    height: 5rem;
+    position: absolute;
+    right:-4.7rem;
+    top:12rem;
+    background-image: url(../images/foxLeft01.png);
+    background-size: 8rem 5rem;
+}
+.run_Left_fox {
+    -webkit-animation: changeImg2 1s linear infinite;
+}
+@-webkit-keyframes changeImg2 {
+    0% {
+        background-image: url(../images/foxLeft01.png);
+    }
+    30% {
+        background-image: url(../images/foxLeft02.png);
+    }
+    35% {
+        background-image: url(../images/foxLeft03.png);
+    }
+    65% {
+        background-image: url(../images/foxLeft04.png);
+    }
+    70% {
+        background-image: url(../images/foxLeft03.png);
+    }
+    90% {
+        background-image: url(../images/foxLeft02.png);
+    }
+    100% {
+        background-image: url(../images/foxLeft01.png);
+    }
+}
 
 /* end */
 .end {
@@ -374,7 +499,6 @@ img{
     height: 100%;
     background-color: #00b5ee;
     position:absolute;
-
     z-index: 9;
     /*display: none;*/
 }
@@ -401,6 +525,8 @@ img{
     position: absolute;
     top: 18.74%;
     left: 2.275rem;
+}
+.smiling-animate{
     -webkit-animation:titlePulse .8s .5s ease both;
 }
 @-webkit-keyframes titlePulse{

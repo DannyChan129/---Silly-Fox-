@@ -7,7 +7,8 @@ $('.start').click(function () {
 })
 $('.go').click(function () {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop * 2 / (aWidth / 16) + "rem";
-
+    $('.run').show();
+    $('.fox').removeClass('run_fox');
 
 })
 
@@ -22,13 +23,22 @@ var the_images = [
     "images/BtnLeft.png",
     "images/BtnRight.png",
     "images/chicken.png",
-    "images/fox.png",
     "images/go.png",
-    "images/logo.png",
     "images/rule.png",
     "images/run.png",
     "images/start.png",
-    "images/homePage.png"
+    "images/homePage.png",
+    "images/beforep2Page.png",
+    "images/beforep3Page.png",
+    "images/beforep4Page.png",
+    "images/btn_onceMore.png",
+    "images/BtnWenhao.png",
+    "images/foxRight01.png",
+    "images/foxRight02.png",
+    "images/foxRight03.png",
+    "images/foxRight04.png",
+    "images/foxRight05.png",
+    "images/koushui.png"
 ];
 jQuery.imgpreload(the_images, {
     each: function () {
@@ -49,12 +59,15 @@ jQuery.imgpreload(the_images, {
 
 var audio1 = document.getElementById('audio1');
 function run() {
-    audio1.src = "audio/run.wav";
+    $('.fox').addClass('run_fox')
+    audio1.src = "audio/run.mp3";
     audio1.play()
-    $('.chicken').animate({right:'+3rem',top:'+5.5rem'},"slow",function () {
-        $('.fox').animate({left:'+4rem',bottom:'+12rem'},"slow",function () {
+    $('.run').hide();
+    $('.chicken').animate({right:'-3rem',top:'2rem'},2000,function () {
+        $('.fox').animate({left:'+17rem',bottom:'20rem'},2000,function () {
             $('.BtnLeft').show();
             $('.BtnRight').show();
+
         });
     });
 
@@ -63,11 +76,13 @@ function run() {
 function toP2() {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *3/ (aWidth / 16) + "rem";
     setTimeout(function () {
-        audio1.src = "audio/S1whats gonna happen.wav";
+        audio1.src = "audio/a7whathappenedtothefox.mp3";
         audio1.play()
-        // $('.page02 .p1dialog1').show();
-        // $('.page02dropfox').hide();
-        // $('.page02fox').css({"left":"-3.2rem","bottom":"12rem"});
+        $('.page02fox').show();
+        $('.page02dropfox').hide();
+        $('.p1dialog1').css({"display":"block","z-Index":"2"});
+        $('.page02fox').removeClass('run_fox');
+        $('.page02fox').css({ "left":"-3.2rem","bottom":"12rem"})
     },1000)
 }
 
@@ -81,6 +96,11 @@ function toHome() {
 
 //page02
 function wenhao() {
+    setTimeout(function(){
+        $('.wenhao').hide();
+    },0)
+
+    $('.page02fox').addClass('run_fox')
     var random = Math.floor(Math.random()*2)
     if(random==0){
         drop()
@@ -95,37 +115,54 @@ function drop() {
     $('.page02dropfox').show();
     $('.dialog1').hide();
     $('.dialog2').css({"display":"block"});
-    audio1.src = "audio/S2the fox fell into the puddle.wav";
+    audio1.src = "audio/S2the fox fell into the puddle.mp3";
     audio1.play();
+   setTimeout(function () {
+       $('.wenhao').show();
+   },3000)
 }
 function goout() {
        $('.dialog3').show();
     $('.page02dropfox').hide();
-    audio1.src = "audio/S3the fox went around the puddle.wav";
+    audio1.src = "audio/S3the fox went around the puddle.mp3";
     audio1.play();
     $('.page02fox').fadeIn('slow',function () {
-        $('.page02fox').animate({left:'1rem'},function () {
-            $('.page02fox').animate({bottom:'6rem'},function () {
+        $('.page02fox').animate({left:'-1.5rem'},1000,function () {
+            $('.page02fox').animate({bottom:'6rem'},1500,function () {
                 $('.page02fox').animate({left:'20rem'},2000);
             })
         })
     })
+    setTimeout(function () {
+        $('.wenhao').show();
+    },3000)
+
 }
 function backP1() {
+    $('.fox').removeClass('run_fox')
     $(".chicken").css({"top":"50%","right":"50%"})
     $(".fox").css({"left":"-1.2rem","bottom":"4rem"})
+    $('.run').show();
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *2/ (aWidth / 16) + "rem";
 }
 function toP3() {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *4/ (aWidth / 16) + "rem";
     setTimeout(function () {
-        audio1.src = "audio/S1whats gonna happen.wav";
+        audio1.src = "audio/a7whathappenedtothefox.mp3";
         audio1.play()
+        $('.page03fox').show();
+        $('.gucangfox').hide();
+        $('.dialog4').css({"display":"block","z-Index":"2"});
+        $('.page02fox').removeClass('run_fox');
+        $('.page02fox').css({ "left":"-3.2rem","bottom":"12rem"})
     },1000)
 }
 
 //page03
 function p3wenhao() {
+    setTimeout(function () {
+        $('.wenhao').hide();
+    },0)
     var random = Math.floor(Math.random()*2)
     if(random==0){
         gucang()
@@ -135,19 +172,24 @@ function p3wenhao() {
     }
 }
 function gucang() {
+    $('.page03fox').addClass('run_fox');
     $('.page03fox').hide();
     $('.dialog4').hide();
     $('.gucangfox').show();
     $('.dialog6').hide();
     $('.dialog5').css({"display":"block"});
-    audio1.src = "audio/S4the fox was stuck.wav";
+    audio1.src = "audio/S4the fox was stuck.mp3";
     audio1.play();
+    setTimeout(function () {
+        $('.wenhao').show();
+    },3000)
 }
 function leave() {
     $('.dialog5').hide();
     $('.dialog6').show();
     $('.gucangfox').hide();
-    audio1.src = "audio/S5the fox went past the bags of corn.wav";
+    $('.page03fox').addClass('run_fox');
+    audio1.src = "audio/S5the fox went past the bags of corn.mp3";
     audio1.play();
     $('.page03fox').fadeIn('slow',function () {
         $('.page03fox').animate({left:'-2rem'},function () {
@@ -156,24 +198,46 @@ function leave() {
             })
         })
     })
+    setTimeout(function () {
+        $('.wenhao').show();
+    },3000)
 }
-function toP22() {
+function backP2() {
     setTimeout(function () {
         $(".page03fox").css({"left":"-3.2rem","bottom":"8rem"});
         $(".gucangfox").hide();
+        audio1.src = "audio/a7whathappenedtothefox.mp3";
+        audio1.play()
+        $('.page02fox').show();
+        $('.page02dropfox').hide();
+        $('.dialog1').css({"display":"block","z-Index":"2"});
+        $('.page02fox').removeClass('run_fox');
+        $('.page03fox').removeClass('run_fox');
+        $('.page02fox').css({ "left":"-3.2rem","bottom":"12rem"})
+
     },1000)
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *3/ (aWidth / 16) + "rem";
 }
 function toP4() {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *5/ (aWidth / 16) + "rem";
     setTimeout(function () {
-        audio1.src = "audio/S1whats gonna happen.wav";
+        audio1.src = "audio/a7whathappenedtothefox.mp3";
         audio1.play()
+        $('.page04fox').show();
+        $('.fengfangfox').hide();
+        $('.fengfang').show();
+        $('.page04fox').removeClass('run_Left_fox');
+        $('.dialog1').css({"display":"block","z-Index":"2"});
+        $('.page04fox').removeClass('run_fox');
+        $('.page04fox').css({ "right":"-4.7rem","top":"12rem"})
     },1000)
 }
 
 //page4
 function p4wenhao() {
+    setTimeout(function () {
+        $('.wenhao').hide();
+    },0)
     var random = Math.floor(Math.random()*2)
     if(random==0){
         fengfang()
@@ -190,23 +254,76 @@ function fengfang() {
     $('.dialog8').hide();
     $('.fengfangfox').show();
     $('.dialog7').css({"display":"block"});
-    audio1.src = "audio/S6the fox bumped into the beehive.wav";
+    audio1.src = "audio/S6the fox bumped into the beehive.mp3";
     audio1.play();
+    setTimeout(function () {
+        $('.wenhao').show();
+    },3000)
 }
 function leaveout() {
+    $('.page04fox').addClass('run_Left_fox');
     $('.dialog7').hide();
     $('.dialog8').show();
     $('.fengfang').show();
     $('.fengfangfox').hide();
-    audio1.src = "audio/S7the fox was under the beehive.wav";
+    audio1.src = "audio/S7the fox was under the beehive.mp3";
     audio1.play();
     $('.page04fox').fadeIn('slow',function () {
-        $('.page04fox').animate({"right":"16rem","top":"15rem"},'2000')
+        $('.page04fox').animate({"right":"16rem","top":"15rem"},2000)
     })
+    setTimeout(function () {
+        $('.wenhao').show();
+    },3000)
 }
 function backP3() {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *4/ (aWidth / 16) + "rem";
+    setTimeout(function () {
+        $(".page03fox").css({"left":"-3.2rem","bottom":"8rem"});
+        $(".gucangfox").hide();
+        audio1.src = "audio/a7whathappenedtothefox.mp3";
+        audio1.play()
+        $('.page03fox').show();
+        $('.dialog1').css({"display":"block","z-Index":"2"});
+        $('.page02fox').removeClass('run_fox');
+        $('.page03fox').removeClass('run_fox');
+        $('.page03fox').css({ "left":"-3.2rem","bottom":"8rem"})
+
+    },1000)
 }
 function toEnd() {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *6/ (aWidth / 16) + "rem";
+    $('.smile').addClass("smiling-animate");
 }
+
+$('.p1dialog1').click(function () {
+    audio1.src = "audio/a7whathappenedtothefox.mp3";
+    audio1.play()
+})
+$('.dialog1').click(function () {
+    audio1.src = "audio/a7whathappenedtothefox.mp3";
+    audio1.play()
+})
+$('.dialog2').click(function () {
+    audio1.src = "audio/S2the fox fell into the puddle.mp3";
+    audio1.play();
+})
+$('.dialog3').click(function () {
+    audio1.src = "audio/S3the fox went around the puddle.mp3";
+    audio1.play();
+})
+$('.dialog5').click(function () {
+    audio1.src = "audio/S4the fox was stuck.mp3";
+    audio1.play();
+})
+$('.dialog6').click(function () {
+    audio1.src = "audio/S5the fox went past the bags of corn.mp3";
+    audio1.play();
+})
+$('.dialog7').click(function () {
+    audio1.src = "audio/S6the fox bumped into the beehive.mp3";
+    audio1.play();
+})
+$('.dialog8').click(function () {
+    audio1.src = "audio/S7the fox was under the beehive.mp3";
+    audio1.play();
+})
