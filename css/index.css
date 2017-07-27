@@ -555,6 +555,14 @@ img{
     top:12rem;
     display: none;
 }
+.page04 img:nth-child(13){
+    width:9.9rem;
+    height: 37%;
+    position: absolute;
+    left:3.3rem;
+    top:35%;
+    display: none;
+}
 .page04fox{
     width: 8rem;
     height: 5rem;

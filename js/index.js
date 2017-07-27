@@ -252,6 +252,8 @@ function toP4() {
 
 //page4
 function p4wenhao() {
+    $('.fengfangwanzheng').hide();
+    $('.fengfangfox').hide();
     $('.fengfangfox2').hide();
     setTimeout(function () {
         $('.wenhao').hide();
@@ -272,9 +274,10 @@ function fengfang() {
     $('.fengfang').hide();
     $('.dialog1').hide();
     $('.dialog8').hide();
-    $('.fengfangfox').show();
+    $('.fengfangwanzheng').show();
     $('.fengfangfox2').show().animate({"right":"-1.5rem"},700,function () {
-
+        $('.fengfangwanzheng').hide();
+        $('.fengfangfox').show();
     }).animate({"right":"-4.7rem"},700);
     $('.dialog7').css({"display":"block"});
     audio1.src = "audio/S6the fox bumped into the beehive.mp3";
@@ -295,7 +298,7 @@ function leaveout() {
     audio1.src = "audio/S7the fox was under the beehive.mp3";
     audio1.play();
     $('.page04fox').fadeIn('slow',function () {
-        $('.page04fox').animate({"right":"3.3rem","top":"12rem"},1500).removeClass('run_Left_fox');
+        $('.page04fox').animate({"right":"3.3rem","top":"14rem"},1500).removeClass('run_Left_fox');
     })
     setTimeout(function () {
         $('.wenhao').show();
