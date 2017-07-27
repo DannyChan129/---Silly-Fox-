@@ -71,7 +71,7 @@ function run() {
     audio1.play()
     $('.run').hide();
     $('.chicken').addClass('run_chicken');
-    $('.chicken').animate({right:'-60px',top:'30px'},3000,function () {
+    $('.chicken').animate({right:'-60px',top:'30px'},5000,function () {
         $('.fox').animate({left:'500px',bottom:'800px'},3000,function () {
             $('.BtnLeft').show();
             $('.BtnRight').show();
