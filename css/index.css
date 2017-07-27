@@ -122,10 +122,40 @@ img{
     0% {
         background-image: url(../images/chicken1.png);
     }
-    30% {
+    5% {
         background-image: url(../images/chicken2.png);
     }
+    10% {
+        background-image: url(../images/chicken1.png);
+    }
+    15% {
+        background-image: url(../images/chicken2.png);
+    }
+    20% {
+        background-image: url(../images/chicken1.png);
+    }
+    25% {
+        background-image: url(../images/chicken2.png);
+    }
+    30% {
+        background-image: url(../images/chicken1.png);
+    }
     35% {
+        background-image: url(../images/chicken2.png);
+    }
+    40% {
+        background-image: url(../images/chicken1.png);
+    }
+    45% {
+        background-image: url(../images/chicken2.png);
+    }
+    50% {
+        background-image: url(../images/chicken1.png);
+    }
+    55% {
+        background-image: url(../images/chicken2.png);
+    }
+    60% {
         background-image: url(../images/chicken1.png);
     }
     65% {
@@ -134,8 +164,23 @@ img{
     70% {
         background-image: url(../images/chicken1.png);
     }
-    100% {
+    75% {
         background-image: url(../images/chicken2.png);
+    }
+    80% {
+          background-image: url(../images/chicken1.png);
+    }
+    85% {
+        background-image: url(../images/chicken2.png);
+    }
+    90% {
+        background-image: url(../images/chicken1.png);
+    }
+    95% {
+        background-image: url(../images/chicken2.png);
+    }
+    100% {
+        background-image: url(../images/chicken1.png);
     }
 }
 
@@ -424,11 +469,11 @@ img{
 
 }
 .page04 img:nth-child(2){
-    width: 8.1rem;
-    height:5rem;
+    width:9.9rem;
+    height: 37%;
     position: absolute;
-    top:13.2rem;
-    left:4.7rem;
+    left:3.3rem;
+    top:35%;
     z-index: 4;
 }
 .page04 img:nth-child(1){
@@ -440,7 +485,7 @@ img{
     display: none;
 }
 .page04 img:nth-child(3){
-    width:9.5rem;
+    width:9.9rem;
     height: 37%;
     position: absolute;
     left:3.3rem;
@@ -449,11 +494,11 @@ img{
 
 }
 .page04 img:nth-child(5){
-    width: 5.3rem;
-    height: 3.2rem;
+    width:9.9rem;
+    height: 37%;
     position: absolute;
-    top:13.8rem;
-    left:3.7rem;
+    left:3.3rem;
+    top:35%;
     z-index: 2;
 }
 
@@ -502,6 +547,14 @@ img{
     left:50%;
     margin-left:-2.75rem;
 }
+.page04 img:nth-child(12){
+    width: 8rem;
+    height: 5rem;
+    position: absolute;
+    right:-4.7rem;
+    top:12rem;
+    display: none;
+}
 .page04fox{
     width: 8rem;
     height: 5rem;
@@ -519,41 +572,59 @@ img{
     0% {
         background-image: url(../images/foxLeft01.png);
     }
-    6% {
-        background-image: url(../images/foxLeft01.png);
-    }
-    12% {
+    5% {
         background-image: url(../images/foxLeft02.png);
     }
-    18% {
-        background-image: url(../images/foxLeft02.png);
-    }
-    24% {
+    10% {
         background-image: url(../images/foxLeft03.png);
+    }
+    15% {
+        background-image: url(../images/foxLeft04.png);
+    }
+    20% {
+        background-image: url(../images/foxLeft05.png);
+    }
+    25% {
+        background-image: url(../images/foxLeft04.png);
     }
     30% {
         background-image: url(../images/foxLeft03.png);
     }
-    36% {
-        background-image: url(../images/foxLeft04.png);
+    35% {
+        background-image: url(../images/foxLeft02.png);
     }
-    42% {
-        background-image: url(../images/foxLeft04.png);
+    40% {
+        background-image: url(../images/foxLeft01.png);
     }
-    48% {
-        background-image: url(../images/foxLeft05.png);
+    45% {
+        background-image: url(../images/foxLeft02.png);
     }
-    60% {
-        background-image: url(../images/foxLeft04.png);
-    }
-    72% {
+    50% {
         background-image: url(../images/foxLeft03.png);
     }
-    84% {
+    65% {
+        background-image: url(../images/foxLeft04.png);
+    }
+    70% {
+        background-image: url(../images/foxLeft05.png);
+    }
+    75% {
+        background-image: url(../images/foxLeft04.png);
+    }
+    80% {
+        background-image: url(../images/foxLeft03.png);
+    }
+    85% {
+        background-image: url(../images/foxLeft02.png);
+    }
+    90% {
+        background-image: url(../images/foxLeft01.png);
+    }
+    95% {
         background-image: url(../images/foxLeft02.png);
     }
     100% {
-        background-image: url(../images/foxLeft01.png);
+        background-image: url(../images/foxLeft03.png);
     }
 }
 

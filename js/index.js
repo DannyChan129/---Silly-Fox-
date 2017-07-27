@@ -71,7 +71,7 @@ function run() {
     audio1.play()
     $('.run').hide();
     $('.chicken').addClass('run_chicken');
-    $('.chicken').animate({right:'-60px',top:'30px'},2000,function () {
+    $('.chicken').animate({right:'-60px',top:'30px'},2500,function () {
         $('.fox').animate({left:'500px',bottom:'800px'},3000,function () {
             $('.BtnLeft').show();
             $('.BtnRight').show();
@@ -246,11 +246,13 @@ function toP4() {
         $('.dialog1').css({"display":"block","z-Index":"2"});
         $('.page04fox').removeClass('run_fox');
         $('.page04fox').css({ "right":"-4.7rem","top":"12rem"})
+        $('.fengfangfox2').hide();
     },1000)
 }
 
 //page4
 function p4wenhao() {
+    $('.fengfangfox2').hide();
     setTimeout(function () {
         $('.wenhao').hide();
     },0)
@@ -271,6 +273,9 @@ function fengfang() {
     $('.dialog1').hide();
     $('.dialog8').hide();
     $('.fengfangfox').show();
+    $('.fengfangfox2').show().animate({"right":"-1.5rem"},700,function () {
+
+    }).animate({"right":"-4.7rem"},700);
     $('.dialog7').css({"display":"block"});
     audio1.src = "audio/S6the fox bumped into the beehive.mp3";
     audio1.play();
@@ -290,7 +295,7 @@ function leaveout() {
     audio1.src = "audio/S7the fox was under the beehive.mp3";
     audio1.play();
     $('.page04fox').fadeIn('slow',function () {
-        $('.page04fox').animate({"right":"16rem","top":"15rem"},2000)
+        $('.page04fox').animate({"right":"3.3rem","top":"15rem"},1500).removeClass('run_Left_fox');
     })
     setTimeout(function () {
         $('.wenhao').show();
