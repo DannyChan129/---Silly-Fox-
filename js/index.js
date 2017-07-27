@@ -317,7 +317,7 @@ function leaveout() {
     audio1.src = "audio/S7the fox was under the beehive.mp3";
     audio1.play();
     $('.page04fox').fadeIn('slow',function () {
-        $('.page04fox').animate({"right":"3.3rem","top":"54%"},1500).removeClass('run_Left_fox');
+        $('.page04fox').animate({"right":"3.3rem","top":"52%"},1500).removeClass('run_Left_fox');
     })
     setTimeout(function () {
         $('.wenhao').show();
