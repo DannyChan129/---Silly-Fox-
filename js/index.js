@@ -71,7 +71,7 @@ function run() {
     audio1.play()
     $('.run').hide();
     $('.chicken').addClass('run_chicken');
-    $('.chicken').animate({right:'-60px',top:'30px'},2500,function () {
+    $('.chicken').animate({right:'-60px',top:'30px'},2800,function () {
         $('.fox').animate({left:'500px',bottom:'800px'},3000,function () {
             $('.BtnLeft').show();
             $('.BtnRight').show();
@@ -295,7 +295,7 @@ function leaveout() {
     audio1.src = "audio/S7the fox was under the beehive.mp3";
     audio1.play();
     $('.page04fox').fadeIn('slow',function () {
-        $('.page04fox').animate({"right":"3.3rem","top":"15rem"},1500).removeClass('run_Left_fox');
+        $('.page04fox').animate({"right":"3.3rem","top":"13rem"},1500).removeClass('run_Left_fox');
     })
     setTimeout(function () {
         $('.wenhao').show();
