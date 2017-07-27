@@ -106,20 +106,7 @@ function toHome() {
 }
 
 //page02
-function wenhao() {
-    setTimeout(function(){
-        $('.wenhao').hide();
-    },0)
 
-    $('.page02fox').addClass('run_fox')
-    var random = Math.floor(Math.random()*2)
-    if(random==0){
-        drop()
-    }else if(random==1){
-        $('.page02fox').css({"left":"-3.2rem","bottom":"12rem"});
-        goout();
-    }
-}
 function drop() {
     $('.page02fox').hide();
     $('.dialog3').hide();
@@ -137,6 +124,7 @@ function goout() {
     $('.page02dropfox').hide();
     audio1.src = "audio/S3the fox went around the puddle.mp3";
     audio1.play();
+    $('.page02fox').addClass('run_fox');
     $('.page02fox').fadeIn('slow',function () {
         $('.page02fox').animate({left:'-1.5rem'},1000,function () {
             $('.page02fox').animate({bottom:'6rem'},1500,function () {
@@ -171,20 +159,38 @@ function toP3() {
         $('.page02fox').css({ "left":"-3.2rem","bottom":"12rem"})
     },1000)
 }
+$('.P2BtnA').click(function () {
+    $('.mock').css({"display":"block"});
+    drop();
+    setTimeout(function () {
+        $('.page02fox').show();
+        $('.page02fox').css({"left":"-3.2rem"});
+        $('.page02fox').removeClass('run_fox');
+        $('.dialog2').hide();
+        $('p1dialog1').show();
+        $('.page02dropfox').hide();
+        $('.mock').css({"display":"none"});
+    },3000)
+
+})
+$('.P2BtnB').click(function () {
+    $('.mock').css({"display":"block"});
+    goout();
+    setTimeout(function () {
+        $('.page02fox').show();
+        $('.page02fox').css({"left":"-3.2rem","bottom":"12rem"});
+        $('.page02fox').removeClass('run_fox');
+        $('.dialog3').hide();
+        $('.p1dialog1').show();
+        $('.page02dropfox').hide();
+        $('.mock').css({"display":"none"});
+    },5000)
+})
+
+
 
 //page03
-function p3wenhao() {
-    setTimeout(function () {
-        $('.wenhao').hide();
-    },0)
-    var random = Math.floor(Math.random()*2)
-    if(random==0){
-        gucang()
-    }else if(random==1){
-        $('.page03fox').css({"left":"-3.2rem","bottom":"8rem"});
-        leave();
-    }
-}
+
 function gucang() {
     $('.page03fox').addClass('run_fox');
     $('.page03fox').hide();
@@ -249,23 +255,35 @@ function toP4() {
         $('.fengfangfox2').hide();
     },1000)
 }
+$('.P3BtnA').click(function () {
+    $('.mock').css({"display":"block"});
+    gucang();
+    setTimeout(function () {
+        $('.page03fox').show();
+        $('.page03fox').css({"left":"-3.2rem"},{"bottom":"8rem"});
+        $('.page03fox').removeClass('run_fox');
+        $('.dialog5').hide();
+        $('.dialog1').show();
+        $('.gucangfox').hide();
+        $('.mock').css({"display":"none"});
+    },3000)
+
+})
+$('.P3BtnB').click(function () {
+    $('.mock').css({"display":"block"});
+    leave();
+    setTimeout(function () {
+        $('.page03fox').show();
+        $('.page03fox').css({"left":"-3.2rem","bottom":"8rem"});
+        $('.page03fox').removeClass('run_fox');
+        $('.dialog6').hide();
+        $('.dialog1').show();
+        $('.gucangfox').hide();
+        $('.mock').css({"display":"none"});
+    },5000)
+})
 
 //page4
-function p4wenhao() {
-    $('.fengfangwanzheng').hide();
-    $('.fengfangfox').hide();
-    $('.fengfangfox2').hide();
-    setTimeout(function () {
-        $('.wenhao').hide();
-    },0)
-    var random = Math.floor(Math.random()*2)
-    if(random==0){
-        fengfang()
-    }else if(random==1){
-        $('.page04fox').css({"right":"-4.7rem","top":"12rem"});
-        leaveout();
-    }
-}
 
 function fengfang() {
     $('.qiantui').hide();
@@ -275,6 +293,7 @@ function fengfang() {
     $('.dialog1').hide();
     $('.dialog8').hide();
     $('.fengfangwanzheng').show();
+    $('.fengfangfox2').hide();
     $('.fengfangfox2').show().animate({"right":"-1.5rem"},700,function () {
         $('.fengfangwanzheng').hide();
         $('.fengfangfox').show();
@@ -298,7 +317,7 @@ function leaveout() {
     audio1.src = "audio/S7the fox was under the beehive.mp3";
     audio1.play();
     $('.page04fox').fadeIn('slow',function () {
-        $('.page04fox').animate({"right":"3.3rem","top":"13.5rem"},1500).removeClass('run_Left_fox');
+        $('.page04fox').animate({"right":"3.3rem","top":"14.5rem"},1500).removeClass('run_Left_fox');
     })
     setTimeout(function () {
         $('.wenhao').show();
@@ -321,9 +340,51 @@ function backP3() {
 
     },1000)
 }
+
+$('.P4BtnA').click(function () {
+    $('.mock').css({"display":"block"});
+    fengfang();
+    setTimeout(function () {
+        $('.fengfangfox2').hide();
+        $('.page04fox').show();
+        $('.fengfangwanzheng').show();
+        $('.page04fox').css({"right":"-4.7rem"},{"bottom":"12rem"});
+        $('.page04fox').removeClass('run_Left_fox');
+        $('.dialog7').hide();
+        $('.dialog1').show();
+        $('.fengfangfox').hide();
+        $('.qiantui').hide();
+        $('.houtui').hide();
+        $('.fengfang').hide()
+        $('.mock').css({"display":"none"});
+    },3000)
+
+})
+$('.P4BtnB').click(function () {
+    $('.mock').css({"display":"block"});
+    leaveout();
+    setTimeout(function () {
+        $('.fengfangfox2').hide();
+        $('.page04fox').show();
+        $('.page04fox').css({"right":"-4.7rem"},{"bottom":"12rem"});
+        $('.fengfangwanzheng').show();
+        $('.page04fox').removeClass('run_Left_fox');
+        $('.dialog8').hide();
+        $('.dialog1').show();
+        $('.fengfangfox').hide();
+        $('.qiantui').hide();
+        $('.houtui').hide();
+        $('.fengfang').hide()
+        $('.fengfangfox').hide();
+        $('.mock').css({"display":"none"});
+    },4000)
+})
+
 function toEnd() {
     document.getElementsByClassName('bigbox')[0].style.marginTop = -aTop *6/ (aWidth / 16) + "rem";
     $('.smile').addClass("smiling-animate");
+    $("#audio1").attr("src", "http://live.babyfs.cn/web/H5/common/audio/finish0.mp3");
+    audio1.play();
 }
 
 $('.p1dialog1').click(function () {
